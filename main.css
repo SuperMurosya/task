@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aba4a4;
+  border-radius: 10px;
+}
+
+.sitebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 304px;
+  height: 100%;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px 20px 20px;
+}
+
+.scrollbox {
+  overflow: auto;
+  padding-right: 10px;
+  visibility: hidden;
+}
+
+.scrollbox-inner,
+.scrollbox:hover {
+  visibility: visible;
+}
+
+.scrollbox-inner p {
+  font-size: 16px;
+}
+
+footer h2 {
+  font-size: 24px;
+  color: #fff;
+  padding: 15px 0 40px;
+}
+
+.content {
+  color: #fff;
+  background-color: #9747ff;
+  position: relative;
+  left: 304px;
+  width: calc(100% - 304px);
+  padding-right: 5px;
+}
+
+.header {
+  background-color: #14ae5c;
+  width: 105%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+.input {
+  background-color: #f24822;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  width: 105%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.main__container {
+  padding: 5px 20px;
+  overflow: auto;
+  height: 100vh;
+  visibility: hidden;
+}
+
+.main__body,
+.main__container:hover {
+  visibility: visible;
+}
+
+.main__item {
+  color: black;
+  padding: 20px;
+  border: 4px solid #EBAB00;
+  background-color: #FFCD29;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 6px;
+}
+.main__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.main__item:nth-child(even) {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.main__item:first-child {
+  margin-top: 112px;
+}
+
+.main__item:last-child {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .sitebar {
+    display: none;
+  }
+  .content {
+    position: static;
+    left: 0;
+    width: 100%;
+    padding-right: 5px;
+  }
+}
+@media (max-width: 320px) {
+  .main__item {
+    max-width: 162px;
+    font-size: 14px;
+  }
+}
